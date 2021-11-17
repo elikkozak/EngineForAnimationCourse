@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E382FF68-3495-3F31-AF78-756471A506CE}</ProjectGuid>
+    <ProjectGuid>{4BEF5E00-2A8C-365C-8C35-F474DC2F787D}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -105,10 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/glad -BC:/Dev/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,12 +117,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/glad -BC:/Dev/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,12 +130,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/glad -BC:/Dev/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,12 +143,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/glad -BC:/Dev/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/glad/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -155,22 +156,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\glad-download-prefix\tmp\glad-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Dev\EngineForAnimationCourse\external\.cache\glad\ZERO_CHECK.vcxproj">
-      <Project>{1D55ED52-C888-32CF-ACBC-C633CE9F0D9C}</Project>
+    <ProjectReference Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\ZERO_CHECK.vcxproj">
+      <Project>{5DC97DAB-5121-321B-8D78-B2B70E88B6ED}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\EngineForAnimationCourse\external\.cache\glad\glad-download.vcxproj">
-      <Project>{26F1D95B-4E86-3A80-9DAD-BBBC7B35E58E}</Project>
+    <ProjectReference Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\glad\glad-download.vcxproj">
+      <Project>{02E37F44-B5D7-3F17-A7C3-CF7FD82CA284}</Project>
       <Name>glad-download</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

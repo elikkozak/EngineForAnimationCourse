@@ -1,14 +1,14 @@
 # Target labels
  imgui-download
 # Source files and their labels
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/imgui-download
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/b4d60e2feb0c0658f02df36a16d251d3/imgui-download.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/70cbb60f01ac868031e16cc61a0cb110/imgui-download-complete.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-install.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-mkdir.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-download.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-update.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-patch.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-configure.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-build.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/f77606d8bc99e298d44122c1d12c92b4/imgui-download-test.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/imgui-download
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/1f2b78512d6bf06e0de2503602a180bf/imgui-download.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/6fef2dd53d962a503329f30224de56f3/imgui-download-complete.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-install.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-mkdir.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-download.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-update.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-patch.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-configure.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-build.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/imgui/CMakeFiles/e79ebff2d722b0dc1ee09323d2bca6ec/imgui-download-test.rule

@@ -1,7 +1,11 @@
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file Copyright.txt or https://cmake.org/licensing for details.
+
+cmake_minimum_required(VERSION 3.5)
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 HEAD
-  WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+  WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE head_sha
   OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -11,8 +15,8 @@ if(error_code)
 endif()
 
 execute_process(
-  COMMAND "C:/Program Files/Git/cmd/git.exe" show-ref v1.69
-  WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+  COMMAND "C:/Program Files/Git/cmd/git.exe" show-ref "v1.69"
+  WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
   OUTPUT_VARIABLE show_ref_output
   )
 # If a remote ref is asked for, which can possibly move around,
@@ -37,8 +41,8 @@ endif()
 # This will fail if the tag does not exist (it probably has not been fetched
 # yet).
 execute_process(
-  COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 v1.69
-  WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+  COMMAND "C:/Program Files/Git/cmd/git.exe" rev-list --max-count=1 "${git_tag}"
+  WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
   RESULT_VARIABLE error_code
   OUTPUT_VARIABLE tag_sha
   OUTPUT_STRIP_TRAILING_WHITESPACE
@@ -48,7 +52,7 @@ execute_process(
 if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
   execute_process(
     COMMAND "C:/Program Files/Git/cmd/git.exe" fetch
-    WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+    WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
     RESULT_VARIABLE error_code
     )
   if(error_code)
@@ -59,7 +63,7 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     # Check if stash is needed
     execute_process(
       COMMAND "C:/Program Files/Git/cmd/git.exe" status --porcelain
-      WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+      WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
       RESULT_VARIABLE error_code
       OUTPUT_VARIABLE repo_status
       )
@@ -68,12 +72,12 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
     endif()
     string(LENGTH "${repo_status}" need_stash)
 
-    # If not in clean state, stash changes in order to be able to be able to
-    # perform git pull --rebase
+    # If not in clean state, stash changes in order to be able to perform a
+    # rebase or checkout without losing those changes permanently
     if(need_stash)
       execute_process(
         COMMAND "C:/Program Files/Git/cmd/git.exe" stash save --all;--quiet
-        WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+        WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
         RESULT_VARIABLE error_code
         )
       if(error_code)
@@ -81,77 +85,132 @@ if(error_code OR is_remote_ref OR NOT ("${tag_sha}" STREQUAL "${head_sha}"))
       endif()
     endif()
 
-    # Pull changes from the remote branch
-    execute_process(
-      COMMAND "C:/Program Files/Git/cmd/git.exe" rebase ${git_remote}/${git_tag}
-      WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
-      RESULT_VARIABLE error_code
-      )
-    if(error_code)
-      # Rebase failed: Restore previous state.
+    if("REBASE" STREQUAL "CHECKOUT")
       execute_process(
-        COMMAND "C:/Program Files/Git/cmd/git.exe" rebase --abort
-        WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
-      )
-      if(need_stash)
-        execute_process(
-          COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
-          WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
-          )
+        COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_remote}/${git_tag}"
+        WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+        RESULT_VARIABLE error_code
+        )
+      if(error_code)
+        message(FATAL_ERROR "Failed to checkout tag: '${git_remote}/${git_tag}'")
       endif()
-      message(FATAL_ERROR "\nFailed to rebase in: 'C:/Dev/EngineForAnimationCourse/cmake/../external/imgui/'.\nYou will have to resolve the conflicts manually")
+    else()
+      # Pull changes from the remote branch
+      execute_process(
+        COMMAND "C:/Program Files/Git/cmd/git.exe" rebase "${git_remote}/${git_tag}"
+        WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+        RESULT_VARIABLE error_code
+        OUTPUT_VARIABLE rebase_output
+        ERROR_VARIABLE  rebase_output
+        )
+      if(error_code)
+        # Rebase failed, undo the rebase attempt before continuing
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" rebase --abort
+          WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+        )
+
+        if(NOT "REBASE" STREQUAL "REBASE_CHECKOUT")
+          # Not allowed to do a checkout as a fallback, so cannot proceed
+          if(need_stash)
+            execute_process(
+              COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
+              WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+              )
+          endif()
+          message(FATAL_ERROR "\nFailed to rebase in: 'C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui'."
+                              "\nOutput from the attempted rebase follows:"
+                              "\n${rebase_output}"
+                              "\n\nYou will have to resolve the conflicts manually")
+        endif()
+
+        # Fall back to checkout. We create an annotated tag so that the user
+        # can manually inspect the situation and revert if required.
+        # We can't log the failed rebase output because MSVC sees it and
+        # intervenes, causing the build to fail even though it completes.
+        # Write it to a file instead.
+        string(TIMESTAMP tag_timestamp "%Y%m%dT%H%M%S" UTC)
+        set(tag_name _cmake_ExternalProject_moved_from_here_${tag_timestamp}Z)
+        set(error_log_file ${CMAKE_CURRENT_LIST_DIR}/rebase_error_${tag_timestamp}Z.log)
+        file(WRITE ${error_log_file} "${rebase_output}")
+        message(WARNING "Rebase failed, output has been saved to ${error_log_file}"
+                        "\nFalling back to checkout, previous commit tagged as ${tag_name}")
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" tag -a
+                  -m "ExternalProject attempting to move from here to ${git_remote}/${git_tag}"
+                  ${tag_name}
+          WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+          RESULT_VARIABLE error_code
+        )
+        if(error_code)
+          message(FATAL_ERROR "Failed to add marker tag")
+        endif()
+
+        execute_process(
+          COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_remote}/${git_tag}"
+          WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+          RESULT_VARIABLE error_code
+        )
+        if(error_code)
+          message(FATAL_ERROR "Failed to checkout : '${git_remote}/${git_tag}'")
+        endif()
+
+      endif()
     endif()
 
     if(need_stash)
       execute_process(
         COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
-        WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+        WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
         RESULT_VARIABLE error_code
         )
       if(error_code)
         # Stash pop --index failed: Try again dropping the index
         execute_process(
           COMMAND "C:/Program Files/Git/cmd/git.exe" reset --hard --quiet
-          WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+          WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
           RESULT_VARIABLE error_code
           )
         execute_process(
           COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --quiet
-          WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+          WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
           RESULT_VARIABLE error_code
           )
         if(error_code)
           # Stash pop failed: Restore previous state.
           execute_process(
             COMMAND "C:/Program Files/Git/cmd/git.exe" reset --hard --quiet ${head_sha}
-            WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+            WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
           )
           execute_process(
             COMMAND "C:/Program Files/Git/cmd/git.exe" stash pop --index --quiet
-            WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+            WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
           )
-          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/Dev/EngineForAnimationCourse/cmake/../external/imgui/'.\nYou will have to resolve the conflicts manually")
+          message(FATAL_ERROR "\nFailed to unstash changes in: 'C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui'."
+                              "\nYou will have to resolve the conflicts manually")
         endif()
       endif()
     endif()
   else()
     execute_process(
-      COMMAND "C:/Program Files/Git/cmd/git.exe" checkout v1.69
-      WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
+      COMMAND "C:/Program Files/Git/cmd/git.exe" checkout "${git_tag}"
+      WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
       RESULT_VARIABLE error_code
       )
     if(error_code)
-      message(FATAL_ERROR "Failed to checkout tag: 'v1.69'")
+      message(FATAL_ERROR "Failed to checkout tag: '${git_tag}'")
     endif()
   endif()
 
-  execute_process(
-    COMMAND "C:/Program Files/Git/cmd/git.exe" submodule update --recursive --init 
-    WORKING_DIRECTORY "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui/"
-    RESULT_VARIABLE error_code
-    )
+  set(init_submodules "TRUE")
+  if(init_submodules)
+    execute_process(
+      COMMAND "C:/Program Files/Git/cmd/git.exe" submodule update --recursive --init 
+      WORKING_DIRECTORY "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+      RESULT_VARIABLE error_code
+      )
+  endif()
   if(error_code)
-    message(FATAL_ERROR "Failed to update submodules in: 'C:/Dev/EngineForAnimationCourse/cmake/../external/imgui/'")
+    message(FATAL_ERROR "Failed to update submodules in: 'C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui'")
   endif()
 endif()
-

@@ -1,14 +1,14 @@
 # Target labels
  stb-download
 # Source files and their labels
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/stb-download
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/aba08456388b92e938542ae9570660b8/stb-download.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/e0199abd4f5142946dc0db8ddab10b26/stb-download-complete.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-install.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-mkdir.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-download.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-update.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-patch.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-configure.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-build.rule
-C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/50d1f4993b968176e85c8bee94448529/stb-download-test.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/stb-download
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/0e6103bcd5e56c67c4eec8aa4ac389e5/stb-download.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/18a672bd733b2d59a036be6a8c78e1af/stb-download-complete.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-install.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-mkdir.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-download.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-update.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-patch.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-configure.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-build.rule
+C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/d36baf8cc58ae521907d91c96f391d18/stb-download-test.rule

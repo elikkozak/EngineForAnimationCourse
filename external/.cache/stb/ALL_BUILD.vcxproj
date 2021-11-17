@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9959B6FF-C0DD-3DBE-8C03-362834A518C4}</ProjectGuid>
+    <ProjectGuid>{AC7970CA-C199-3C63-B68B-E2089F6C53B6}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -105,10 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/stb -BC:/Dev/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,12 +117,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/stb -BC:/Dev/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,12 +130,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/stb -BC:/Dev/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,12 +143,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Dev/EngineForAnimationCourse/external/.cache/stb -BC:/Dev/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Dev/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb -BC:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb --check-stamp-file C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/external/.cache/stb/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -155,22 +156,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.15.0-rc4\CMakeSystem.cmake;C:\Dev\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\ExternalProject.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindGit.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.15\Modules\RepositoryInfo.txt.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject-gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.19\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\RepositoryInfo.txt.in;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\3.19.0-rc1\CMakeSystem.cmake;C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\stb-download-prefix\tmp\stb-download-cfgcmd.txt.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Dev\EngineForAnimationCourse\external\.cache\stb\ZERO_CHECK.vcxproj">
-      <Project>{755B7F73-E0EC-3E7A-A224-6A9B63800286}</Project>
+    <ProjectReference Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\ZERO_CHECK.vcxproj">
+      <Project>{A2E426F2-EA88-34AA-997D-C0EC36C46E53}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\EngineForAnimationCourse\external\.cache\stb\stb-download.vcxproj">
-      <Project>{5EF12A39-7E09-3B27-8622-4B5D5D47DB07}</Project>
+    <ProjectReference Include="C:\Users\elikk\Desktop\ASS1\EngineForAnimationCourse\external\.cache\stb\stb-download.vcxproj">
+      <Project>{94FEC719-CE47-397D-A52D-E6B5D6D0E8C1}</Project>
       <Name>stb-download</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

@@ -8,8 +8,8 @@ project(imgui-download NONE)
 include(ExternalProject)
 ExternalProject_Add(imgui-download
                     TLS_VERIFY;OFF;GIT_CONFIG;advice.detachedHead=false;GIT_REPOSITORY;https://github.com/ocornut/imgui.git;GIT_TAG;v1.69
-                    SOURCE_DIR          "C:/Dev/EngineForAnimationCourse/cmake/../external/imgui"
-                    BINARY_DIR          "C:/Dev/EngineForAnimationCourse/build/imgui-build"
+                    SOURCE_DIR          "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/cmake/../external/imgui"
+                    BINARY_DIR          "C:/Users/elikk/Desktop/ASS1/EngineForAnimationCourse/Build/imgui-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
