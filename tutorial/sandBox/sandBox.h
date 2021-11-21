@@ -9,10 +9,17 @@ public:
 	~SandBox();
 	void Init(const std::string& config);
 	double doubleVariable;
+
+	
+
+
+	
+	
 private:
 	// Prepare array-based edge data structures and priority queue
 	
 	
 	void Animate();
+	//void SetDataStructures(Eigen::MatrixXd V, Eigen::MatrixXi F);
 };
 

@@ -140,6 +140,21 @@ public:
 	bool isPicked;
 	bool isActive;
 
+    std::vector<Eigen::MatrixXd> OV;
+    std::vector<Eigen::MatrixXi> OF;
+
+    // Prepare array-based edge data structures and priority queue
+    std::vector<Eigen::VectorXi> EMAP;
+    std::vector<Eigen::MatrixXi> E, EF, EI;
+    typedef std::set<std::pair<double, int> > PriorityQueue;
+    std::vector<PriorityQueue> Q;
+    std::vector<std::vector<PriorityQueue::iterator >> Qit;
+    // If an edge were collapsed, we'd collapse it to these points:
+    std::vector <Eigen::MatrixXd> C;
+    std::vector<int> num_collapsed;
+
+
+
     
 
     // List of registered plugins
@@ -149,7 +164,10 @@ public:
     float scroll_position;
 
   public:
-    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+      EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
+  	  void reset();
+      bool preDraw();
   };
 
 } // end namespace

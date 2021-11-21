@@ -3,7 +3,7 @@
 #include "igl/collapse_edge.h"
 #include "Eigen/dense"
 #include <functional>
-
+#include <igl/shortest_edge_and_midpoint.h>
 
 
 SandBox::SandBox()
@@ -36,6 +36,10 @@ void SandBox::Init(const std::string &config)
 			data().point_size = 10;
 			data().line_width = 2;
 			data().set_visible(false, 1);
+			// OF[selected_data_index] = data().F;
+			// OV[selected_data_index] = data().V;
+			//std::cout << "here1 " << item_name << std::endl;
+			//std::cout << "here2 " << item_name << std::endl;
 
 			
 		}
@@ -61,5 +65,6 @@ void SandBox::Animate()
 		
 	}
 }
+
 
 

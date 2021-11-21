@@ -178,7 +178,7 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			rndr->TranslateCamera(Eigen::Vector3f(0.01f, 0, 0));
 			break;
 		case ' ':
-
+			scn->preDraw();
 			break;
 		
 		default: 
