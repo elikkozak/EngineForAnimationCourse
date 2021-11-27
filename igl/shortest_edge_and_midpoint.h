@@ -38,6 +38,7 @@ namespace igl
     const Eigen::MatrixXi & /*EI*/,
     double & cost,
     Eigen::RowVectorXd & p);
+  IGL_INLINE void shortest_edge_and_midpoint_quadric_error_metrics(const int e, const Eigen::MatrixXd& V, const Eigen::MatrixXi&, const Eigen::MatrixXi& E, const Eigen::VectorXi&, const Eigen::MatrixXi&, const Eigen::MatrixXi&, const std::vector<Eigen::Matrix4d>&, double& cost, Eigen::RowVectorXd& p);
 }
 
 #ifndef IGL_STATIC_LIBRARY

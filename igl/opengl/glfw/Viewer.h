@@ -154,7 +154,7 @@ public:
     std::vector<int> num_collapsed;
 
 
-
+    std::vector< std::vector<Eigen::Matrix4d>> q_vertices;
     
 
     // List of registered plugins
@@ -168,6 +168,10 @@ public:
 
   	  void reset();
       bool preDraw();
+      bool myPreDraw();
+      void calcVertexCost();
+      void calcEdgesCost();
+
   };
 
 } // end namespace

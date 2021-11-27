@@ -44,6 +44,8 @@
 #include <igl/serialize.h>
 #include <igl/shortest_edge_and_midpoint.h>
 #include <igl\edge_flaps.cpp>
+
+#include "Build/my_collapse_edge.h"
 //#include <igl\opengl\ViewerData.cpp>
 //#include <igl\WindingNumberAABB.h>
 //#include <tutorial\sandBox\sandBox.h>
@@ -84,11 +86,12 @@ namespace glfw
 	   Qit(20),
 	  // If an edge were collapsed, we'd collapse it to these points:
 	   C(20),
+		q_vertices(20),
 	   num_collapsed(20)
   {
     data_list.front().id = 0;
 
-  
+	
 
     // Temporary variables initialization
    // down = false;
@@ -391,17 +394,30 @@ namespace glfw
       edge_flaps(data().F, E[selected_data_index], EMAP[selected_data_index], EF[selected_data_index], EI[selected_data_index]);
 
       Qit[selected_data_index].resize(E[selected_data_index].rows());
-
+      q_vertices[selected_data_index].resize(OV[selected_data_index].rows());
+      for (int i = 0; i < OV[selected_data_index].rows(); ++i)
+      {
+          q_vertices[selected_data_index][i] = Eigen::Matrix4d::Zero(); 
+      }
+      
       C[selected_data_index].resize(E[selected_data_index].rows(), data().V.cols());
       Eigen::VectorXd costs(E[selected_data_index].rows());
       Q[selected_data_index].clear();
+
+  	 calcVertexCost();
+
       for (int e = 0; e < E[selected_data_index].rows(); e++)
       {
           double cost = e;
           Eigen::RowVectorXd p(1, 3);
-          shortest_edge_and_midpoint(e, data().V, data().F, E[selected_data_index], EMAP[selected_data_index], EF[selected_data_index], EI[selected_data_index], cost, p);
+      	//shortest_edge_and_midpoint(e, data().V, data().F, E[selected_data_index], EMAP[selected_data_index], EF[selected_data_index], EI[selected_data_index], cost, p);
+
+          shortest_edge_and_midpoint_quadric_error_metrics(e, data().V, data().F, E[selected_data_index], EMAP[selected_data_index], EF[selected_data_index], EI[selected_data_index],q_vertices[selected_data_index], cost, p);
+
           C[selected_data_index].row(e) = p;
+
           Qit[selected_data_index][e] = Q[selected_data_index].insert(std::pair<double, int>(cost, e)).first;
+
       }
       num_collapsed[selected_data_index] = 0;
       data().set_mesh(data().V, data().F);
@@ -414,7 +430,7 @@ namespace glfw
       {
           bool something_collapsed = false;
           // collapse edge
-          const int max_iter = std::ceil(0.01 * Q[selected_data_index].size());
+          const int max_iter = std::ceil(0.05 * Q[selected_data_index].size());
           for (int j = 0; j < max_iter; j++)
           {
               if (!collapse_edge(
@@ -435,6 +451,56 @@ namespace glfw
   	  return false;
   }
 
+  bool Viewer::myPreDraw()
+  {
+      if (!Q[selected_data_index].empty())
+      {
+          bool something_collapsed = false;
+          // collapse edge
+          const int max_iter = std::ceil(0.05 * Q[selected_data_index].size());
+          for (int j = 0; j < max_iter; j++)
+          {
+              if (!my_collapse_edge(
+                  shortest_edge_and_midpoint_quadric_error_metrics, data().V, data().F, E[selected_data_index], EMAP[selected_data_index], EF[selected_data_index], EI[selected_data_index], q_vertices[selected_data_index], Q[selected_data_index], Qit[selected_data_index], C[selected_data_index]))
+              {
+                  break;
+              }
+              something_collapsed = true;
+              num_collapsed[selected_data_index]++;
+          }
+          calcVertexCost();
+
+
+          if (something_collapsed)
+          {
+
+              data().set_mesh(data().V, data().F);
+          }
+      }
+      return false;
+  }
+  
+  void Viewer::calcVertexCost()
+  {
+
+      // q_vertices[selected_data_index].clear();
+      for (auto j = 0; j < data().F.rows(); j++)
+      {
+          Eigen::Matrix4d kp_matrix = Eigen::Matrix4d::Zero();
+          Eigen::RowVector3d p_vector = data().F_normals.row(j).normalized();
+          Eigen::Vector3d point = data().V.row(data().F.row(j)[0]);
+          double d = -(p_vector[0] * point[0] + p_vector[1] * point[1] + p_vector[2] * point[2]);
+          Eigen::Vector4d plane_vector;
+          plane_vector << p_vector[0], p_vector[1], p_vector[2], d;
+          kp_matrix += plane_vector * (plane_vector.transpose());
+          q_vertices[selected_data_index][data().F.row(j)[0]] += kp_matrix;
+          q_vertices[selected_data_index][data().F.row(j)[1]] += kp_matrix;
+          q_vertices[selected_data_index][data().F.row(j)[2]] += kp_matrix;
+      }
+
+  }
+  
+ 
 } // end namespace
 } // end namespace
 }
